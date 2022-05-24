@@ -10,36 +10,36 @@ xC = 1 / (w*C);
 vL = abs(current .* (i*w*L));
 vC = abs(current * (i*(1/(w*C))));
 vR = abs(current * R);
-% 
-% figure(1);
-% plot(L,current);
-% title("Current Magnitude vs Variable Inductance");
-% xlabel("Inductance (H)");
-% ylabel("Current Magnitude (A)");
-% 
-% 
-% figure(2);
-% semilogy(L,xL);
-% hold on 
-% yline(xC);
-% hold off
-% title("Component Reactance Magnitude vs Variable Inductance");
-% xlabel("Inductance (H)");
-% ylabel("Component Reactance Magnitude (Ohms)");
-% legend("xL", "xC");
-% 
-% figure(3);
-% hold on 
-% semilogx(L,vL);
-% hold on 
-% semilogx(L,vC);
-% hold on
-% semilogx(L, vR);
-% hold off
-% legend ("vL", "vC", "vR");
-% title("Component Voltage Magnitude vs Variable Inductance");
-% xlabel("Inductance (H)");
-% ylabel("Component Voltage Magnitude (V)");
+ 
+figure(1);
+plot(L,current);
+title("Current Magnitude vs Variable Inductance");
+xlabel("Inductance (H)");
+ylabel("Current Magnitude (A)");
+
+
+figure(2);
+semilogy(L,xL);
+hold on 
+yline(xC);
+hold off
+title("Component Reactance Magnitude vs Variable Inductance");
+xlabel("Inductance (H)");
+ylabel("Component Reactance Magnitude (Ohms)");
+legend("xL", "xC");
+
+figure(3);
+hold on 
+semilogx(L,vL);
+hold on 
+semilogx(L,vC);
+hold on
+semilogx(L, vR);
+hold off
+legend ("vL", "vC", "vR");
+title("Component Voltage Magnitude vs Variable Inductance");
+xlabel("Inductance (H)");
+ylabel("Component Voltage Magnitude (V)");
 
 
 C = 1e-6:(1e-6 * 5): 100e-6;
